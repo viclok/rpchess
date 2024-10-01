@@ -1,0 +1,40 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# Build directories
+dist/
+build/
+
+# Dependency directories
+bower_components/
+
+# IDE and editor configurations
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage/
+
+# Temporary files
+temp/
+tmp/
+
+# Optional files
+package-lock.json # (uncomment if you want to ignore this, but typically it's good to include it)
+pnpm-lock.yaml
