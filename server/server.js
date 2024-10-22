@@ -4,15 +4,31 @@ const cors = require("cors")
 const corsOptions = {
     origin: ["http://localhost:5173"],
 }
+const http = require('http')
+const server = http.createServer(app)
+const { Server } = require("socket.io")
+const { Chess } = require('chess.js')
+const io = new Server(server, {
+    cors: {
+        origin: "http://localhost:5173",
+        methods: ["POST", "GET"]
+    }
+})
+
 app.use(cors(corsOptions))
 
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
     res.json({fruits: ["apple", "orange"]})
 })
 
-app.listen(8080, () => {
+io.on('connection', (socket) => {
+    console.log('a user connected');
+  });
+
+server.listen(8080, () => {
     console.log("Server started on port 8080")
 })
+
 // const path = require('path');
 
 
@@ -25,10 +41,6 @@ app.listen(8080, () => {
 
 // // Serve static files from the "public" directory
 // app.use(express.static(path.join(__dirname, 'public')));
-
-// io.on('connection', (socket) => {
-//     console.log('a user connected');
-//   });
 
 // // Define the root route
 // app.get('/', (req, res) => {

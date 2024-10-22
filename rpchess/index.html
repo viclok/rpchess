@@ -17,32 +17,13 @@
 </head>
 <body>
     <h1>Rock, paper, scissors?</h1>
-    <button id="rock" onclick="playGame('rock')">Rock</button>
-    <button id="paper" onclick="playGame('paper')">Paper</button>
-    <button id="scissors" onclick="playGame('scissors')">Scissors</button>
+    <button id="joinLobby">Join Lobby</button>
     <h2 id="result"></h2>
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
     <div id="board1" style="width: 400px"></div>
 
     <script type="module" src="script.js"></script>
-    <!-- <script src="/socket.io/socket.io.js"></script> -->
-    <!-- <script src="https://unpkg.com/chess.js"></script>  -->
-    <!-- <script>
-      // var socket = io();
-      import axios from "axios"
-      const fetchAPI = async () => {
-        const response = await axios.get("http://localhost:8080/api")
-        console.log(response.data.fruits)
-      }
-
-      fetchAPI()
-            // var board1 = Chessboard('board1', {
-      //   draggable: true,
-      //   position: 'start',
-      //   onDrop: 'handleDrop',
-      //   pieceTheme: "/img/chesspieces/wikipedia/{piece}.png"
-      // })  
-    </script> -->
-
-
 </body>
 </html>
